@@ -1,5 +1,10 @@
-import { withGTConfig } from 'gt-next/config';
+import type { NextConfig } from "next";
+import { withGTConfig } from "gt-next/config";
 
-const nextConfig = {};
+const nextConfig: NextConfig = {
+  /* config options here */
+};
 
-export default withGTConfig(nextConfig);
+export default withGTConfig(nextConfig, {
+  // Additional GT configuration options
+});

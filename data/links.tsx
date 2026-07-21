@@ -51,6 +51,8 @@ export const socialMedia = [
     title: "instagram",
     href: "https://www.instagram.com/ma_book95/",
   },
-  { title: "Facebook", href: "/" },
-  { title: "Youtube", href: "/" },
+  {
+    title: "WhatsApp Channel",
+    href: "https://whatsapp.com/channel/0029VbC7iiqLo4hjOiJik402",
+  },
 ];

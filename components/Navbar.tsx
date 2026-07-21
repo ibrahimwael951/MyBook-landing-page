@@ -8,6 +8,9 @@ import { useMainLinks } from "@/data/links";
 import { Animate, FadeDown } from "@/Animation";
 import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
+import LocaleSelector from "./LanguageSelector";
+import { ModeToggle } from "@/components/ModeToggle";
+import { Var } from "gt-next";
 
 const Navbar = () => {
   const mainLinks = useMainLinks();
@@ -96,6 +99,12 @@ const Navbar = () => {
                 </motion.div>
               ))}
             </div>
+            <Var>
+              <div className="mt-5 flex items-center justify-center gap-2">
+                <ModeToggle />
+                <LocaleSelector />
+              </div>
+            </Var>
           </motion.div>
         )}
       </AnimatePresence>

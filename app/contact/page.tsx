@@ -1,27 +1,27 @@
 "use client";
 import { useState, Suspense } from "react";
-import { Button } from "@/components/ui/default_elements/button";
-import { Input } from "@/components/ui/default_elements/input";
-import { Label } from "@/components/ui/default_elements/label";
-import { Textarea } from "@/components/ui/default_elements/textarea";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/default_elements/select";
+} from "@/components/ui/select";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/default_elements/card";
+} from "@/components/ui/card";
 import {
   Alert,
   AlertDescription,
-} from "@/components/ui/default_elements/alert";
+} from "@/components/ui/alert";
 import { Mail, MessageSquare, Building, CheckCircle2 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import Loading from "@/components/ui/State/Loading";

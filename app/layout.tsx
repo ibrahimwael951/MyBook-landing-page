@@ -5,6 +5,7 @@ import { GTProvider, useLocale } from "gt-next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
+import { getLocale, getLocaleDirection } from "gt-next/server";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -24,16 +25,18 @@ export const metadata: Metadata = {
     " A social media platform for book lovers to share their favorite books, reviews, and recommendations.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = useLocale();
+   const dir = await getLocaleDirection();
+  const lang = await getLocale();
 
   return (
     <html
-      lang={locale}
+      lang={lang}
+      dir={dir}
       className={cn(
         "h-full",
         "antialiased",

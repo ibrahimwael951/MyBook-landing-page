@@ -8,18 +8,18 @@ import { Badge } from "../ui/badge";
 import Image from "next/image";
 
 const images = [
-  "/Community/woman_playing_guitar.jpg",
+  "/post2.jpg",
   "/Community/france-book.jpg",
   "/Community/Men_Reading.jpg",
-  "/Community/woman-reading-comics.jpg",
+  "/post1.jpg",
   "/Community/Flower_book.jpg",
   "/Community/Book_Opened.jpg",
   "/Community/Man_inside_book.jpg",
   "/Community/Book_With_Rope.jpg",
   "/Community/Reader_in_garden.jpg",
-  "/Community/Woman_Reading_book.jpg",
-  "/Community/Book_Opened.jpg",
-  "/Community/woman_playing_guitar.jpg",
+  "/post3.jpg",
+  "/post4.jpg",
+  "/post2.jpg",
 ];
 
 

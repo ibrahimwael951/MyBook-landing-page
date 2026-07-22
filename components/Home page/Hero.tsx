@@ -6,7 +6,6 @@ import LightRays from "../ui/LightRays";
 import { Badge } from "../ui/badge";
 import { T } from "gt-next";
 
-
 const Hero = () => {
   return (
     <section
@@ -27,8 +26,8 @@ const Hero = () => {
           transition={{ duration: 0.4 }}
           className="text-6xl lg:text-7xl text-center -px-5 "
         >
-          Latest <span className="mark"> Book</span> <br />
-          Finding Waves
+          Latest <span className="mark"> Book</span> & <br />
+          Best Community
         </motion.h1>
         <motion.p
           {...FadeUp}
@@ -37,9 +36,7 @@ const Hero = () => {
           className="text-sm md:text-lg text-center max-w-3xl px-5"
         >
           My Book is a simple, friendly, and inspiring platform built for book
-          lovers who want to share their reading journey with others. Whether
-          you’re reading your first book or your 100th, My Book gives you a space
-          to express, connect, and inspire through books.
+          lovers who want to share their reading journey with others.
         </motion.p>
         <motion.div
           {...FadeUp}

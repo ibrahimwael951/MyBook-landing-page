@@ -69,7 +69,7 @@ const Features = () => {
             />
           </div>
 
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="flex flex-col items-center text-center md:items-start">
             <Badge className="mb-2">
               <BookUp2 size={20} />
               <span>{t("Post Your Reads")}</span>
@@ -91,7 +91,7 @@ const Features = () => {
           {...ViewPort}
           className="flex justify-between items-center flex-col lg:flex-row gap-8"
         >
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="flex flex-col items-center text-center md:items-start">
             <Badge className="mb-2">
               <ThumbsUp size={20} />
               <span>{t("Books with 3D Models")}</span>
@@ -137,7 +137,7 @@ const Features = () => {
             />
           </div>
 
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="flex flex-col items-center text-center md:items-start">
             <Badge className="mb-2">
               <UserRoundPlus size={20} />
               <span>{t("Follow Your Favorite Authors")}</span>
@@ -159,7 +159,7 @@ const Features = () => {
           {...ViewPort}
           className="flex justify-between items-center flex-col lg:flex-row gap-8"
         >
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="flex flex-col items-center text-center md:items-start">
             <Badge className="mb-2">
               <ShieldCheck size={20} />
               <span>{t("More Privacy for Girls and Boys")}</span>
@@ -295,7 +295,7 @@ const Features = () => {
             </Card>
           </div>
 
-          <div className="flex flex-col items-center text-center md:items-start md:text-left ">
+          <div className="flex flex-col items-center text-center md:items-start ">
             <Badge className="mb-2">
               <Quote size={20} />
               <span>{t("Daily Quotes")}</span>

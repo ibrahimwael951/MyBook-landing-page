@@ -3,17 +3,32 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Menu, X } from "lucide-react";
-import { useMainLinks } from "@/data/links";
-import { Animate, FadeDown } from "@/Animation";
+import {
+  ArrowRight,
+  HeartPlus,
+  InfoIcon,
+  Menu,
+  Sparkles,
+  Users,
+  X,
+  Home,
+} from "lucide-react";
+ import { Animate, FadeDown } from "@/Animation";
 import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
 import LocaleSelector from "./LanguageSelector";
 import { ModeToggle } from "@/components/ModeToggle";
-import { Var } from "gt-next";
-
+import { useGT, Var } from "gt-next";
+ 
 const Navbar = () => {
-  const mainLinks = useMainLinks();
+  const t = useGT();
+  const mainLinks = [
+    { href: "/", title: t("Home"), icon: Home },
+    { href: "/about", title: t("About"), icon: InfoIcon },
+    { href: "/features", title: t("Features"), icon: Sparkles },
+    { href: "/community", title: t("Community"), icon: Users },
+    { href: "/sponsors", title: t("Sponsors"), icon: HeartPlus },
+  ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 

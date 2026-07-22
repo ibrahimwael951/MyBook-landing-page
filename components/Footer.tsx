@@ -1,18 +1,48 @@
 "use client";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  Contact,
+  HeartPlus,
+  Home,
+  Info,
+  InfoIcon,
+  Sparkles,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
-import { socialMedia, useCompanyLinks, useMainLinks } from "@/data/links";
-import { motion } from "framer-motion";
+ import { motion } from "framer-motion";
 import { ModeToggle } from "@/components/ModeToggle";
-import { T, Var } from "gt-next";
+import { T, useGT, Var } from "gt-next";
 import LocaleSelector from "./LanguageSelector";
 
 const MotionLink = motion.create(Link);
 
 const Footer = () => {
-  const Company = useCompanyLinks();
-  const MainLinks = useMainLinks();
+  const t = useGT();
+  const socialMedia = [
+    {
+      title: "instagram",
+      href: "https://www.instagram.com/ma_book95/",
+    },
+    {
+      title: "WhatsApp Channel",
+      href: "https://whatsapp.com/channel/0029VbC7iiqLo4hjOiJik402",
+    },
+  ];
+  const Company = [
+    { href: "/about", title: t("About"), icon: Info },
+    { href: "/contact", title: t("Contact Us"), icon: Contact },
+    { href: "/sponsors", title: t("Sponsors"), icon: HeartPlus },
+  ];
+
+  const MainLinks = [
+    { href: "/", title: t("Home"), icon: Home },
+    { href: "/about", title: t("About"), icon: InfoIcon },
+    { href: "/features", title: t("Features"), icon: Sparkles },
+    { href: "/community", title: t("Community"), icon: Users },
+    { href: "/sponsors", title: t("Sponsors"), icon: HeartPlus },
+  ];
   return (
     <footer className="border-t border-neutral-200 dark:border-neutral-700 my-10">
       <T>

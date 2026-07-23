@@ -13,13 +13,13 @@ import {
   X,
   Home,
 } from "lucide-react";
- import { Animate, FadeDown } from "@/Animation";
+import { Animate, FadeDown } from "@/Animation";
 import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
 import LocaleSelector from "./LanguageSelector";
 import { ModeToggle } from "@/components/ModeToggle";
-import { useGT, Var } from "gt-next";
- 
+import { T, useGT, Var } from "gt-next";
+
 const Navbar = () => {
   const t = useGT();
   const mainLinks = [
@@ -65,7 +65,9 @@ const Navbar = () => {
 
         <div className="flex items-center gap-2">
           <Button link="/waitlist" size="sm">
-            <span>Join Waitlist</span>
+            <T>
+              <span>Join Waitlist</span>
+            </T>
             <ArrowRight size={16} />
           </Button>
 

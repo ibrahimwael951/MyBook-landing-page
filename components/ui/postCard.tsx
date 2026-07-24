@@ -26,7 +26,7 @@ export default function PostCard({
   likeCount = 0,
 }: PostCardProps) {
   return (
-    <Card className="w-full max-w-xl rounded-[2rem] border-none bg-[#161616] text-white overflow-hidden">
+    <Card className="w-full max-w-xl rounded-[2rem] overflow-hidden">
       <CardContent className="flex flex-col gap-5 p-6">
         {/* Header: menu + author */}
         <div className="flex items-start justify-between">
@@ -34,7 +34,7 @@ export default function PostCard({
             <img
               src={authorAvatar}
               alt={authorName}
-              className="h-12 w-12 shrink-0 rounded-full object-cover ring-1 ring-white/10"
+              className="h-12 w-12 shrink-0 rounded-full object-cover"
             />
             <div className="flex flex-col">
               <span className="font-semibold text-base leading-tight">

@@ -25,7 +25,7 @@ export default function AuthorCard({
   onFollowClick,
 }: AuthorCardProps) {
   return (
-    <Card className="w-full max-w-xl rounded-[2rem] border-none bg-[#161616] text-white shadow-xl overflow-hidden">
+    <Card className="w-full max-w-xl rounded-[2rem] border-none overflow-hidden">
       <CardContent className="flex flex-col gap-5 p-6">
         {/* Header: follow button + author */}
         <div className="flex items-start justify-between">
@@ -34,12 +34,12 @@ export default function AuthorCard({
             onClick={onFollowClick}
             className={`flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold transition-colors ${
               isFollowing
-                ? "bg-transparent text-emerald-400 ring-1 ring-emerald-400/60"
-                : "bg-emerald-400 text-black hover:bg-emerald-300"
+                ? "bg-transparent text-primary ring-1 ring-primary/60"
+                : "bg-primary text-white dark:text-black  hover:bg-emerald-300"
             }`}
           >
             {isFollowing ? "Following" : "Follow"}
-            <Heart size={16} className={isFollowing ? "fill-emerald-400" : ""} />
+            <Heart size={16} className={isFollowing ? "fill-primary" : ""} />
           </button>
 
           <div className="flex items-center gap-3">
@@ -49,30 +49,30 @@ export default function AuthorCard({
             <img
               src={avatar}
               alt={name}
-              className="h-14 w-14 shrink-0 rounded-full object-cover ring-1 ring-white/10"
+              className="h-14 w-14 shrink-0 rounded-full object-cover  "
             />
           </div>
         </div>
 
         {/* Bio */}
-        <p className="text-sm leading-relaxed text-neutral-300">{bio}</p>
+        <p className="text-sm leading-relaxed">{bio}</p>
 
         {/* Stats */}
-        <div className="mt-1 flex items-center gap-6 text-sm text-neutral-300">
+        <div className="mt-1 flex items-center gap-6 text-sm">
           <div className="flex items-center gap-2">
-            <span className="text-neutral-500">(reviews {reviewCount})</span>
+            <span >(reviews {reviewCount})</span>
             <span className="font-semibold">{reviewCount}</span>
             <Star size={16} className="fill-amber-400 text-amber-400" />
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-neutral-500">Followers</span>
+            <span>Followers</span>
             <span className="font-semibold">{followerCount}</span>
             <Users size={16} />
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-neutral-500">Books</span>
+            <span>Books</span>
             <span className="font-semibold">{bookCount}</span>
             <BookOpen size={16} />
           </div>

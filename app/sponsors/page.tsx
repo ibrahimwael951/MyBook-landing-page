@@ -3,69 +3,74 @@ import FeatureCard from "@/components/FeatureCard";
 import {
   Award,
   BookOpen,
-  TrendingUp,
-  Users,
-  BarChart3,
-  Eye,
-  Target,
-  Library,
   BadgeCheck,
-  FileText,
   Feather,
   ScrollText,
   CalendarDays,
   Landmark,
+  Heart,
+  Compass,
+  Rocket,
+  Handshake,
+  Sparkles,
+  Library,
+  FileText,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Animate, FadeLeft, FadeUp, ViewPort } from "@/Animation";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
-import { T, useGT } from "gt-next";
+import { T, useGT, Var } from "gt-next";
+import Threads from "@/components/Threads";
 
 export default function SponsorFeaturesPage() {
   const t = useGT();
+
+  // Pre-launch positioning: no traffic/engagement numbers to lean on yet,
+  // so the pitch is built around founding-partner status and brand
+  // alignment with reading culture instead of reach or analytics.
   const features = [
     {
-      icon: Eye,
-      title: t("Homepage Visibility"),
+      icon: Award,
+      title: t("Founding Partner Recognition"),
       description: t(
-        "Your logo and name prominently displayed in our dedicated sponsors section on the homepage, visible to thousands of daily visitors.",
+        "Be permanently credited as one of MyBook's founding supporters — a story you can only claim once, and one that only exists before launch.",
       ),
     },
     {
-      icon: Award,
+      icon: Heart,
+      title: t("Brand Alignment With Reading Culture"),
+      description: t(
+        "Attach your name to literacy, storytelling, and lifelong reading — values readers already trust, without a hard sell in sight.",
+      ),
+    },
+    {
+      icon: Compass,
+      title: t("Shape the Platform From Day One"),
+      description: t(
+        "Work directly with us on badge design, launch messaging, and featured content before the public ever sees any of it.",
+      ),
+    },
+    {
+      icon: Rocket,
+      title: t("Guaranteed Launch Visibility"),
+      description: t(
+        "Lock in homepage and sponsor-page placement now, ahead of the demand — and the pricing — that comes after we're live.",
+      ),
+    },
+    {
+      icon: BadgeCheck,
       title: t("Custom Badge System"),
       description: t(
-        "Create and manage custom badges that users can earn by visiting your profile or engaging with your content. Track engagement in real-time through your dashboard.",
+        "Help design a badge users can earn by engaging with your content, live and ready from the very first day MyBook opens.",
       ),
     },
     {
-      icon: BookOpen,
-      title: t("Book License Integration"),
+      icon: Handshake,
+      title: t("A Direct Line to the Team"),
       description: t(
-        "Provide book licenses that we'll host on our platform. Your books will be available to our community with proper attribution and links back to your catalog.",
-      ),
-    },
-    {
-      icon: Users,
-      title: t("Direct Audience Access"),
-      description: t(
-        "Connect with a dedicated community of book lovers. Users who support your partnership get special recognition on their profiles.",
-      ),
-    },
-    {
-      icon: BarChart3,
-      title: t("Analytics Dashboard"),
-      description: t(
-        "Access detailed analytics about user engagement, badge claims, profile visits, and overall reach within our platform.",
-      ),
-    },
-    {
-      icon: Target,
-      title: t("Targeted Recognition"),
-      description: t(
-        "Your partnership appears only in designated areas (homepage sponsors section and dedicated partner pages) - never intrusive, always respectful.",
+        "As an early partner, your feedback shapes the roadmap directly — not a support ticket queue, an actual seat at the table.",
       ),
     },
   ];
@@ -77,32 +82,24 @@ export default function SponsorFeaturesPage() {
         {
           icon: Library,
           text: t(
-            "Present selected titles within a focused reading-oriented platform",
+            "Reserve premium placement for selected titles ahead of public launch",
           ),
         },
         {
           icon: FileText,
           text: t(
-            "Provide licensed digital access to books or selected chapters",
+            "Provide licensed digital excerpts the platform will feature from day one",
           ),
         },
         {
           icon: BookOpen,
           text: t(
-            "Support curated reading experiences and thematic collections",
-          ),
-        },
-        {
-          icon: TrendingUp,
-          text: t(
-            "Understand which literary topics attract sustained reader interest",
+            "Help shape the curated reading collections early users see first",
           ),
         },
         {
           icon: BadgeCheck,
-          text: t(
-            "Offer publication-linked badges that recognize reader engagement",
-          ),
+          text: t("Co-create publication-linked badges tied to your catalog"),
         },
       ],
     },
@@ -111,32 +108,24 @@ export default function SponsorFeaturesPage() {
       items: [
         {
           icon: Feather,
-          text: t(
-            "Highlight published works or works-in-progress in a respectful context",
-          ),
+          text: t("Be featured among the very first author profiles at launch"),
         },
         {
           icon: ScrollText,
           text: t(
-            "Share licensed excerpts or author-approved reading materials",
+            "Share licensed excerpts or works-in-progress with a built-in early audience",
           ),
         },
         {
           icon: Award,
           text: t(
-            "Create symbolic badges tied to specific books or reading milestones",
+            "Create a symbolic badge tied to your book or a reading milestone",
           ),
         },
         {
-          icon: BookOpen,
+          icon: Handshake,
           text: t(
-            "Participate in long-form literary discussions around your work",
-          ),
-        },
-        {
-          icon: BadgeCheck,
-          text: t(
-            "Build a lasting author presence based on ideas, not promotion",
+            "Build a presence rooted in ideas, before the platform is public",
           ),
         },
       ],
@@ -146,81 +135,85 @@ export default function SponsorFeaturesPage() {
       items: [
         {
           icon: Landmark,
-          text: t("Support reading culture and long-term literary initiatives"),
+          text: t(
+            "Help define the reading culture MyBook is built around from day one",
+          ),
         },
         {
           icon: CalendarDays,
-          text: t("Sponsor reading themes, seasons, or cultural programs"),
+          text: t(
+            "Sponsor a themed reading season as part of the launch calendar",
+          ),
         },
         {
           icon: BookOpen,
-          text: t("Contribute educational or archival reading materials"),
-        },
-        {
-          icon: FileText,
-          text: t("Provide legally licensed cultural or educational content"),
-        },
-        {
-          icon: Award,
           text: t(
-            "Recognize participation through symbolic, non-commercial badges",
+            "Contribute educational or archival content that anchors the library",
+          ),
+        },
+        {
+          icon: Sparkles,
+          text: t(
+            "Be recognized as a founding cultural partner, not just a sponsor",
           ),
         },
       ],
     },
   ];
 
-  const dashboardFeatures = [
-    t("Badge Creation & Management - Design custom badges users can earn"),
-    t("User Engagement Metrics - See who's supporting your partnership"),
-    t("Content License Upload - Easily add book licenses to the platform"),
-    t("Profile Customization - Control your sponsor profile appearance"),
-    t("Analytics Reports - Monthly reports on reach and engagement"),
-    t("Badge Distribution - Track who claimed your badges and when"),
-  ];
-
   return (
-    <main className="min-h-screen py-12 mt-20">
-      <div className="max-w-6xl mx-auto px-4">
-        {/* Header */}
-        <header className="text-center mb-16">
-          <T>
-            <Badge className="mx-auto mb-4">Sponsors Features</Badge>
-            <motion.h1
-              {...FadeUp}
-              animate={{ ...Animate.animateonly }}
-              transition={{ ...Animate.transition, delay: 0.1 }}
-              className="text-4xl md:text-5xl font-bold mb-6"
-            >
-              Partner With Us
-            </motion.h1>
-            <motion.p
-              {...FadeUp}
-              animate={{ ...Animate.animateonly }}
-              transition={{ ...Animate.transition, delay: 0.2 }}
-              className="text-xl max-w-3xl mx-auto mb-8"
-            >
-              Support our book-loving community while gaining visibility and
-              engagement. A partnership built on mutual respect and shared love
-              for literature.
-            </motion.p>
-            <motion.div
-              {...FadeUp}
-              animate={{ ...Animate.animateonly }}
-              transition={{ ...Animate.transition, delay: 0.3 }}
-              className="flex gap-4 justify-center"
-            >
-              <Button size={"xl"} link="/contact?subject=partnership">
-                Become a Partner
-              </Button>
-              <Button size={"xl"} variant={"outline"} link="/sponsors">
-                See Our Sponsors
-              </Button>
-            </motion.div>
-          </T>
-        </header>
+    <main className="min-h-screen ">
+      <header className="relative py-12 px-5 flex flex-col justify-center text-center mb-16 overflow-hidden h-screen ">
+        <T>
+          <Var>
+            <div className="absolute  inset-0 -z-10 overflow-hidden opacity-50 lg:opacity-70">
+              <Threads
+                color={[1, 1, 1]}
+                amplitude={1.5}
+                distance={0.3}
+                enableMouseInteraction
+              />
+            </div>
+          </Var>
 
-        {/* What We Offer */}
+          <Badge animated className="mx-auto mb-4">
+            Sponsors Features
+          </Badge>
+          <motion.h1
+            {...FadeUp}
+            animate={{ ...Animate.animateonly }}
+            transition={{ ...Animate.transition, delay: 0.1 }}
+            className="text-4xl md:text-5xl font-bold mb-6"
+          >
+            Partner With Us
+          </motion.h1>
+          <motion.p
+            {...FadeUp}
+            animate={{ ...Animate.animateonly }}
+            transition={{ ...Animate.transition, delay: 0.2 }}
+            className="text-xl max-w-3xl mx-auto mb-8"
+          >
+            Support our book-loving community while gaining visibility and
+            engagement. A partnership built on mutual respect and shared love
+            for literature.
+          </motion.p>
+          <motion.div
+            {...FadeUp}
+            animate={{ ...Animate.animateonly }}
+            transition={{ ...Animate.transition, delay: 0.3 }}
+            className="flex gap-4 justify-center"
+          >
+            <Button size={"xl"} link="/contact?subject=partnership">
+              Become a Partner
+            </Button>
+            <Button size={"xl"} variant={"outline"} link="/sponsors">
+              Our Sponsors
+            </Button>
+          </motion.div>
+        </T>
+      </header>
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Why Become a Founding Partner */}
         <motion.section
           {...FadeUp}
           animate={{ ...Animate.animateonly }}
@@ -228,13 +221,19 @@ export default function SponsorFeaturesPage() {
           className="mb-16"
         >
           <T>
-            <motion.h2
-              {...FadeUp}
-              {...ViewPort}
-              className="text-3xl font-bold mb-8 text-center"
-            >
-              What We Offer
-            </motion.h2>
+            <div className="text-center mb-8">
+              <motion.h1 {...FadeUp} {...ViewPort} className="font-bold">
+                Why Become a Founding Partner?
+              </motion.h1>
+              <motion.p
+                {...FadeUp}
+                {...ViewPort}
+                className="text-muted-foreground mt-3 max-w-2xl mx-auto"
+              >
+                MyBook hasn't launched yet — which means the founding-partner
+                spot is still open, and it only gets claimed once.
+              </motion.p>
+            </div>
           </T>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
@@ -251,7 +250,7 @@ export default function SponsorFeaturesPage() {
               {...ViewPort}
               className="text-3xl font-bold mb-8 text-center"
             >
-              Partnership Benefits
+              What Partnership Looks Like
             </motion.h2>
           </T>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -285,113 +284,6 @@ export default function SponsorFeaturesPage() {
           </div>
         </section>
 
-        {/* How It Works */}
-        <section className="mb-16">
-          <T>
-            <motion.h2
-              {...FadeUp}
-              {...ViewPort}
-              className="text-3xl font-bold mb-8 text-center"
-            >
-              How It Works
-            </motion.h2>
-          </T>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                step: "1",
-                title: t("Apply"),
-                description: t(
-                  "Submit your partnership application with details about your organization and what you'd like to contribute.",
-                ),
-              },
-              {
-                step: "2",
-                title: t("Setup"),
-                description: t(
-                  "Once approved, we'll set up your profile, dashboard access, and help you customize your presence.",
-                ),
-              },
-              {
-                step: "3",
-                title: t("Contribute"),
-                description: t(
-                  "Provide financial support, book licenses, or content. Create custom badges for user engagement.",
-                ),
-              },
-              {
-                step: "4",
-                title: t("Engage"),
-                description: t(
-                  "Monitor your dashboard, track badge claims, and see how users engage with your partnership.",
-                ),
-              },
-            ].map((step, index) => (
-              <motion.div
-                key={index}
-                {...FadeUp}
-                {...ViewPort}
-                className="text-center"
-              >
-                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {step.step}
-                </div>
-                <h3 className="font-semibold mb-2">{step.title}</h3>
-                <p className="max-w-96 mx-auto text-sm text-muted-foreground">
-                  {step.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* What We DON'T Do */}
-        <section className="mb-16 bg-muted/50 border rounded-lg p-8">
-          <T>
-            <motion.h2
-              {...FadeUp}
-              {...ViewPort}
-              className="text-2xl font-bold mb-4"
-            >
-              Our Commitment to Integrity
-            </motion.h2>
-            <motion.p {...FadeUp} {...ViewPort} className="mb-6">
-              We believe in transparent, respectful partnerships. Here's what we
-              guarantee:
-            </motion.p>
-          </T>
-          <ul className="space-y-3">
-            {[
-              t("No sponsor names or ads inside book content or user posts"),
-              t(
-                "No manipulation of book rankings or recommendation algorithms",
-              ),
-              t(
-                "No tracking scripts or invasive analytics on user reading behavior",
-              ),
-              t("No pop-ups, banners, or disruptive promotional content"),
-              t(
-                "Your presence is limited to: homepage sponsors section and dedicated partner pages only",
-              ),
-              t(
-                "Badge system is opt-in - users choose to engage with your partnership",
-              ),
-            ].map((item, index) => (
-              <motion.li
-                key={index}
-                {...FadeLeft}
-                {...ViewPort}
-                className="flex items-start gap-3"
-              >
-                <div className="w-6 h-6 rounded-full bg-success/20 flex items-center justify-center shrink-0 mt-0.5">
-                  ✓
-                </div>
-                <span className="text-sm">{item}</span>
-              </motion.li>
-            ))}
-          </ul>
-        </section>
-
         {/* CTA */}
         <section className="text-center bg-card border rounded-lg p-12">
           <T>
@@ -400,22 +292,23 @@ export default function SponsorFeaturesPage() {
               {...ViewPort}
               className="text-3xl font-bold mb-4"
             >
-              Ready to Partner With Us?
+              Help Us Build It From the Ground Up
             </motion.h2>
             <motion.p
               {...FadeUp}
               {...ViewPort}
               className="text-lg mb-8 max-w-2xl mx-auto"
             >
-              Join our community of publishers, authors, and literary
-              organizations who support accessible reading culture.
+              Founding partnerships are limited by nature — once MyBook
+              launches, this becomes a very different conversation. Join us
+              while it's still the ground floor.
             </motion.p>
             <Button
               link="/contact?subject=partnership"
               size={"xxl"}
               GlareHoverClassName="mx-auto"
             >
-              Get Started Now!
+              Become a Founding Partner
             </Button>
           </T>
         </section>
